@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game - Leaderboards</title>
+    <link rel="stylesheet" href="leadstyle.css" />
+  </head>
+  <body>
+    <div>
+    <button id="back" onclick="window.location.href = 'home.html';">
+        <i class="fa fa-angle-double-left"></i>
+        <span lang="es">&#160Retourner</span>
+        <span lang="en">&#160Back</span>
+        <span lang="z">&#160返回</span>
+      </button>
+    <h1>Leaderboards</h1>
+    <div id="board">
+      <p>player name:</p>
+      <p>score:</p>
+    </div>
+    <div class="container">
+        <div class="todo-app" id="todo">
+          <h2>Submit your score here</h2>
+          <br>
+          <input type="text" id="item" placeholder="Enter Name...">
+          <br>
+          <br>
+          <button onclick="add()">Add Item <i class="fa-solid fa-plus"></i></button>
+          <button onclick="del()">Clear all <i class="fa-solid fa-ban"></i></button>
+        </div>
+        <ul class="to-do-list" id="id01">
+        </ul>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="leadscript.js"></script>
+  </body>
+</html>
