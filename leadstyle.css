@@ -5,22 +5,66 @@ body {
   background-image: linear-gradient(to top left, #2980b9, #16a085, #2ecc71);
     font-family: "Asap", sans-serif;
   }
+  #back{
+    border-radius: 4px;
+        background-color: rgb(185, 185, 185);
+        border: 2px solid black;
+        color: #000000;
+        text-align: center;
+        font-size: 28px;
+        width: 150px;transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      
+  }
+  
+  #back:hover{
+    background-color: #505050; /* Green */
+        color: white;
+  }
+  #back:active{
+    background-color: #292929;
+          transform: translateY(1px);
+  }
+  
   .container {
     max-width: 405px;
     margin: 137px auto;
-    padding: 20px;
+    
     display: flex;
     flex-direction: column;
+    text-align: center;
+
+  }
+  #header{
+    padding: 5px;
+    display: flex;
+    gap:2px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  }
+  #leadtit{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #close-but{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin:10px;
+  }
+  #close-but:hover{
+    background-color: red;
+    color:white;
+  }
+  #close-but:active{
+    background-color: rgb(155, 2, 2);
   }
   .todo-app {
-    width: 100%;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    border: 1px solid #d3d3d3;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
-
     display:grid;
   position: fixed;
   top: 50%;
@@ -31,48 +75,88 @@ body {
   border-radius: 10px;
   z-index: 10;
   background-color: white;
-  width: 450px;
+  width: 500px;
   max-width: 80%;
+  align-items: center;
   }
   .open-popup{
     transform: translate(-50%, -50%) scale(1);
   }
   .todo-app h2 {
-    padding: 10px;
+    position:relative;
+    
+    left: 10px;
   }
   .todo-app input {
-    width: 250px;
+    width: 400px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #d3d3d3;
+    position:relative;
+    left:5px;
   }
-  .todo-app button {
-    width: fit-content;
-    padding: 5px;
-    cursor: pointer;
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
-    background-color: whitesmoke;
+  .hide{
+    visibility: hidden;
   }
-  .todo-app button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  #addbut {
+    border-radius: 10px;
+  background-color: #21a6ff;
+  border: 2px solid black;
+  color: white;
+  text-align: center;
+  font-size: large;
+  padding: 10px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
   }
+  #addbut:hover {
+    background-color: #2d6fff;
+  }
+  #addbut:active {
+    background-color: #1c03ff;
+  transform: translateY(2px);
+  }
+
   li {
     font-size: 1.5rem;
   }
   .to-do-list {
-    margin-top: 20px;
-    margin-right: 5px;
-    padding: 0 20px 10px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
     list-style: none;
+    
   }
   .to-do-list li{
-    font-size: small;
+    font-size: large;
     background-color: whitesmoke;
-    padding: 20px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .to-do-list li:nth-child(1){
+    background: gold;
+  }
+  .to-do-list li:nth-child(2){
+    background: gold;
+  }
+  .to-do-list li:nth-child(3){
+    background: #c0c0c0;
+  }
+  .to-do-list li:nth-child(4){
+    background: #c0c0c0;
+  }
+  .to-do-list li:nth-child(5){
+    background: #cd7f32;
+  }
+  .to-do-list li:nth-child(6){
+    background: #cd7f32;
+  }
+  #reftit{
+    font-size: larger;
+    text-align: left;
+    
+    text-indent: 2em;
   }
   #overlay {
     position: fixed;

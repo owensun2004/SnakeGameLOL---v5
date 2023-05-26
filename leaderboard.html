@@ -6,35 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game - Leaderboards</title>
     <link rel="stylesheet" href="leadstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="/Jquery library/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <div>
-    <button id="back" onclick="window.location.href = 'home.html';">
+      
+    <div class="container">
+      <button id="back" onclick="window.location.href = 'home.html';">
         <i class="fa fa-angle-double-left"></i>
         <span lang="es">&#160Retourner</span>
         <span lang="en">&#160Back</span>
         <span lang="z">&#160返回</span>
       </button>
-    <h1>Leaderboards</h1>
-    <div id="board">
-      <p>player name:</p>
-      <p>score:</p>
-    </div>
-    <div class="container">
+      <h1 id="leadtit">Leaderboards</h1>
         <div class="todo-app" id="todo">
-          <h2>Submit your score here</h2>
+          <div id="header">
+          <h2 id="smttit">Submit your score here</h2>
+          <button id="close-but" onclick="XclosePopUp()">&times</button>
+        </div>
           <br>
           <input type="text" id="item" placeholder="Enter Name...">
           <br>
           <br>
-          <button onclick="add()">Add Item <i class="fa-solid fa-plus"></i></button>
-          <button onclick="del()">Clear all <i class="fa-solid fa-ban"></i></button>
+          <div id="opbut">
+          <button onclick="add()" id="addbut">Add Item <i class="fa-solid fa-plus"></i></button>
         </div>
+        </div>
+        <div>
+        <p id="reftit">&#160player name&emsp;&emsp;&emsp;&emsp;&#160&#160score</p>
         <ul class="to-do-list" id="id01">
         </ul>
       </div>
+      </div>
+      <button onclick="del()">Clear all <i class="fa-solid fa-ban"></i></button>
     </div>
     <div id="overlay"></div>
+    <script src="homescript.js"></script>
     <script src="leadscript.js"></script>
   </body>
 </html>
